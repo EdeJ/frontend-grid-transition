@@ -8,7 +8,7 @@
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    margin: 100px;
+    transition: background-color .30s ease-in-out;
 }
 
 #menu::before,
@@ -24,10 +24,35 @@
 #menu::before {
     top: -20px;
     left: 0;
+    transition: .30s ease-in-out;
+    background-color: #D84282;
 }
 
 #menu::after {
     bottom: -20px;
     left: 0;
+    transition: .30s ease-in-out;
 }
 
+.container:hover #menu::before {
+    top: 0px;
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.container:hover #menu::after {
+    bottom: 0px;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.container:hover #menu {
+    background-color: transparent;
+}
+
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: left;
+    cursor: pointer;
+}

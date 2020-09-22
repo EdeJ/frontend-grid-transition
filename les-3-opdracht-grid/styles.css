@@ -5,7 +5,7 @@
     column-gap: 16px;
     grid-template-rows: 50px auto 50px 50px 50px auto 50px;
     grid-template-columns: 1fr;
-    grid-template-areas: "A" "B" "C" "D" "E" "none" "F";
+    grid-template-areas: "a" "b" "c" "d" "e" "." "f";
 }
 
 .item {
@@ -18,33 +18,33 @@
 }
 
 #item-1 {
-    grid-area: A;
+    grid-area: a;
 }
 
 #item-2 {
-    grid-area: B;
+    grid-area: b;
 }
 
 #item-3 {
-    grid-area: C;
+    grid-area: c;
 }
 
 #item-4 {
-    grid-area: D;
+    grid-area: d;
 }
 
 #item-5 {
-    grid-area: E;
+    grid-area: e;
 }
 
 #item-6 {
-    grid-area: F;
+    grid-area: f;
 }
 
 @media screen and (min-width: 576px) {
     .container {
         grid-template-rows: 50px 190px 100px auto 50px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "A C C" "B C C" "B E D" "B E none" "F F F";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "a c c" "b c c" "b e d" "b e ." "f f f";
     }
 }
